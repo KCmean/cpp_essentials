@@ -64,13 +64,13 @@ int main()
     
 
     while ( n!= 0) {
-        int bit = n &1; // yaha bit nahi digit nikal na hai lappu 
+        int digit = n  %10 ; // yaha bit nahi digit nikal na hai lappu 
 
-        if(bit == 1){
+        if(digit == 1){
             ans = ans + pow(2,i);
         }
 
-        n = n >> 1;
+        n = n / 10;
         i++;
     }
 
