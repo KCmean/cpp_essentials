@@ -6,8 +6,9 @@ int main()
    long runs{0};
    while(x) {
        x--;
-       std::cout<<x;
        runs++;
    }
    std::cout << runs << std::endl;
+
+//    return -1;
 }
