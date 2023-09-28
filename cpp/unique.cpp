@@ -1,18 +1,30 @@
-#include <iostream>
-using namespace std;
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
 
+        // int ans = 0;
 
-void printArray(){
-    
-    
-}
+        // for(int i = 0 ; i < nums.size() ; i++){
+        //     ans = ans^nums[i];
+        // }
 
-int main()
-{
-    int arr[10];
-    int n;
+        
+        // for(int i = 1  ; i < nums.size() ; i++){
+        //     ans = ans^i;
+        // }
 
-
-
-    return 0;
-}
+        
+        // return ans;
+        int ans = 0;
+        unordered_map<int, int> cur;
+        for (int x: nums){
+            cur[x]++;
+        }
+        
+        for (auto& [x,c] : cur){
+            if(cur.count(c) > 1){
+                ans = x;
+            }
+        }
+        return ans;
+    }
