@@ -7,11 +7,9 @@ int binarySearch(int arr[] , int size , int key){
     int start = 0;
     int end = size-1;
 
-    // int mid = (start+end)/2; 
 
-    int mid = start + (end-start)/2; // for out of bound int values
+    int mid = start + (end-start)/2; 
 
-    // cout << mid <<"first"<<endl;
 
     while(start <= end){
 
@@ -28,9 +26,6 @@ int binarySearch(int arr[] , int size , int key){
         }
 
         mid = start + (end-start)/2;
-
-        // cout << mid <<"end" <<endl;
-
 
     }
 
